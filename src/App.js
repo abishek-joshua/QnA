@@ -6,6 +6,7 @@ class App extends React.Component{
   render(){
     return(
       <div className="app">
+        <h1><strong>Under Construction.....</strong></h1>
         <h1 className="qna-title">QnA</h1>
 
         <div className="questions-box">
@@ -23,6 +24,7 @@ class App extends React.Component{
         <Question questionStatement="What is a Tech stack?"/>
         <Question questionStatement="Is javascript a language?"/>
         <Question questionStatement="when is the event?"/>
+
         </div>
 
         <Ask/>

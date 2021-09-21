@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Question from './Components/Question/Question';
 import Ask from './Components/Ask/Ask';
+import SignIn from './Components/SignIn/SignIn';
 class App extends React.Component{
   render(){
     return(
@@ -25,9 +26,11 @@ class App extends React.Component{
         <Question questionStatement="Is javascript a language?"/>
         <Question questionStatement="when is the event?"/>
 
+
         </div>
 
         <Ask/>
+        <SignIn />
       </div>
     );
   }

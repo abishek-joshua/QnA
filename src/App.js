@@ -6,8 +6,10 @@ import SignIn from './Components/SignIn/SignIn';
 class App extends React.Component{
   render(){
     return(
+      
       <div className="app">
         <h1><strong>Under Construction.....</strong></h1>
+        <SignIn />
         <h1 className="qna-title">QnA</h1>
 
         <div className="questions-box">
@@ -30,7 +32,7 @@ class App extends React.Component{
         </div>
 
         <Ask/>
-        <SignIn />
+        
       </div>
     );
   }

@@ -6,11 +6,9 @@ const SignIn = () => {
         <div className="SignIn">
             <h1>Sign In</h1>
             <div className="formDetails">
-                <strong>Email</strong> <input type="email" placeholder="xyz@student.tce.edu"></input><br></br><br></br>
-                <strong>Password</strong> <input type="password"></input><br></br><br></br>
-                <div className='formButton'>
-                    <button>SignIn</button>
-                </div>
+                <strong>Email</strong> <input className="email-box" type="email" placeholder="xyz@student.tce.edu"></input>
+                <strong>Password</strong> <input className="password-box" type="password"></input>
+                <button className="SignInButton">SignIn</button>
             </div>
         </div>
     );

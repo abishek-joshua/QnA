@@ -1,11 +1,39 @@
 .SignIn{
     text-align: center;
+    color: black;
 }
 
 .formDetails {
+    padding: 1em;
+    margin: em;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    display: grid;
-    border-style: solid;
-    border-color: blue;
-    width: 50%;
+
+    font-size: 30px;
+    
+}
+
+.SignInButton {
+    font-family: 'Ubuntu';
+    font-size:20px;
+    height: 1.5em;
+    width: 4em;
+    border-radius: 0.5em;
+    background-color:white;
+    color: black;
+    margin: 1em;
+}
+
+.email-box,.password-box {
+    width: 20em;
+    border: 1.5px solid blue;
+    border-radius: 1em;
+    height: 2em;
+    margin: 1em;
+
+}
+
+input:focus{
+    outline: none;
 }

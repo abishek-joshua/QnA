@@ -3,6 +3,9 @@
 }
 
 .formDetails {
+    align-items: center;
+    display: grid;
     border-style: solid;
     border-color: blue;
+    width: 50%;
 }

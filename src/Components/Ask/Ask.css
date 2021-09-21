@@ -1,0 +1,32 @@
+.ask-box{
+    display:grid;
+    height: 20em;
+    width: 20em;
+    background-color:royalblue;
+    border-radius: 0.5em;
+    padding: 1em;
+    margin: 5em;
+}
+.post-button{
+    font-family: 'Ubuntu';
+    font-size:20px;
+    height: 1.5em;
+    width: 3em;
+    border-radius: 0.5em;
+    background-color:white;
+    color: black;
+    margin: 1em;
+}
+.ask-a-question{
+    font-size: 25px;
+    color:cornsilk;
+}
+.post-button:hover{
+    filter: brightness(0.9);
+}
+.question-asked{
+    padding: 1em;
+    color:slateblue;
+    width: 5em;
+    height: 5em;
+}

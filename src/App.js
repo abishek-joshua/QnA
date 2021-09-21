@@ -2,14 +2,14 @@ import React from 'react';
 import './App.css';
 import Question from './Components/Question/Question';
 import Ask from './Components/Ask/Ask';
-import SignIn from './Components/SignIn/SignIn';
+import Navigation from './Components/Navigation/Navigation';
+//import SignIn from './Components/SignIn/SignIn';
 class App extends React.Component{
   render(){
     return(
       
       <div className="app">
-        <h1><strong>Under Construction.....</strong></h1>
-        <SignIn />
+        <Navigation />
         <h1 className="qna-title">QnA</h1>
 
         <div className="questions-box">

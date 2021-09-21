@@ -1,0 +1,17 @@
+.navigation {
+    display: flex;
+    padding: 2em;
+    margin: 2em;
+}
+
+.logo {
+    height: 10%;
+    width: 10%;
+    border: 1px solid black;
+}
+
+.sign-out {
+    float: right;
+    padding: 1em;
+}
+

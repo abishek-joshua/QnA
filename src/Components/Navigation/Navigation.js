@@ -1,14 +1,17 @@
 import React from "react";
-import "./Navigation.css"
-
-
+import "./Navigation.css";
+import SearchBox from '../SearchBox/SearchBox';
+import Logo from "../../images/Logo.svg";
+import Profile from "../../images/profile.svg";
 class Navigation extends React.Component{
     render() {
         return(
             <div>
                 <nav className="navigation">
-                    <img  className = "logo" alt="Logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-mz0GpE-47vyrrBOrJllU7ko4RBb48fGyXQ&usqp=CAU"/>
-                    <p className="sign-out">Sign Out</p>
+                    <img  className = "logo" alt="Logo" src={Logo}/>
+                        <SearchBox/>
+                        <div className="qna-title">QnA</div>
+                    <img  className = "profile" alt="Logo" src={Profile}/>
                 </nav>
             </div>
 

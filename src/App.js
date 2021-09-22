@@ -3,16 +3,16 @@ import './App.css';
 import Question from './Components/Question/Question';
 import Ask from './Components/Ask/Ask';
 import Navigation from './Components/Navigation/Navigation';
-//import SignIn from './Components/SignIn/SignIn';
+
 class App extends React.Component{
   render(){
     return(
       
       <div className="app">
         <Navigation />
-        <h1 className="qna-title">QnA</h1>
 
-        <div className="questions-box">
+        <div className="main-content">
+          <div className="questions-box">
 
           <div className="questions-box-header">
             <span className="explore">Explore..</span>
@@ -21,18 +21,16 @@ class App extends React.Component{
               <option>most answered</option>
             </select>
           </div>
-          
         <Question questionStatement="what is why?"/>
         <Question questionStatement="why there are 7 days in a week?"/>
         <Question questionStatement="What is a Tech stack?"/>
         <Question questionStatement="Is javascript a language?"/>
         <Question questionStatement="when is the event?"/>
-
-
         </div>
 
         <Ask/>
-        
+        </div>
+
       </div>
     );
   }

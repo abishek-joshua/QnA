@@ -1,17 +1,23 @@
 .navigation {
-    display: flex;
-    padding: 2em;
     margin: 2em;
+    display: flex;
+    align-items: center ;
+    justify-content:space-around;
 }
 
-.logo {
-    height: 10%;
-    width: 10%;
-    border: 1px solid black;
+.qna-title{
+    font-size: 50px;
+    color:darkslateblue;
+    padding: 0.1em;
+    margin: 0.1em;
 }
 
-.sign-out {
-    float: right;
-    padding: 1em;
+.logo{
+    height: 5em;
+    width: 5em;
 }
 
+.profile{
+    height: 5em;
+    width: 5em;
+    }

@@ -2,8 +2,8 @@
     display:grid;
     height: 20em;
     width: 20em;
-    background-color:royalblue;
     border-radius: 0.5em;
+    border: 1px solid black;
     padding: 1em;
     margin: 5em;
 }
@@ -19,7 +19,7 @@
 }
 .ask-a-question{
     font-size: 25px;
-    color:cornsilk;
+    color:darkviolet;
 }
 .post-button:hover{
     filter: brightness(0.9);
@@ -27,6 +27,7 @@
 .question-asked{
     padding: 1em;
     color:slateblue;
-    width: 5em;
-    height: 5em;
+    width: 15em;
+    height: 10em;
+    resize: none;
 }

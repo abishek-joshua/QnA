@@ -2,10 +2,9 @@
   font-family: 'Ubuntu';
   display:grid;
 }
-.qna-title{
-  font-size: 50px;
-  color: blue;
-  text-align: center;
+.main-content{
+  display: flex;
+  
 }
 .questions-box{
   margin: 2em;
@@ -19,7 +18,9 @@
   border-radius: 1em;
   font-family:'Ubuntu','Times New Roman', Times, serif;
   float:right;
+  padding: 0.2em;
 }
+
 select:focus{
   outline: none;
 }

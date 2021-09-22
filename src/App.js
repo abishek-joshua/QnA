@@ -1,18 +1,15 @@
 import React from 'react';
 import './App.css';
 import Question from './Components/Question/Question';
-import Ask from './Components/Ask/Ask';
 import Navigation from './Components/Navigation/Navigation';
 
 class App extends React.Component{
   render(){
     return(
-      
       <div className="app">
         <Navigation />
 
-        <div className="main-content">
-          <div className="questions-box">
+        <div className="questions-box">
 
           <div className="questions-box-header">
             <span className="explore">Explore..</span>
@@ -21,14 +18,11 @@ class App extends React.Component{
               <option>most answered</option>
             </select>
           </div>
-        <Question questionStatement="what is why?"/>
-        <Question questionStatement="why there are 7 days in a week?"/>
-        <Question questionStatement="What is a Tech stack?"/>
-        <Question questionStatement="Is javascript a language?"/>
-        <Question questionStatement="when is the event?"/>
-        </div>
-
-        <Ask/>
+          <Question questionStatement="what happens at Tech Utsav?"/>
+          <Question questionStatement="How will i get OD?"/>
+          <Question questionStatement="What is a Tech stack?"/>
+          <Question questionStatement="Where can i get Bonafide?"/>
+          <Question questionStatement="How many days will be there in between semester exams?"/>
         </div>
 
       </div>

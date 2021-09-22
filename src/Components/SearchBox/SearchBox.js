@@ -1,6 +1,6 @@
 import React from 'react';
 import "./SearchBox.css";
-import SearchIcon from "../../images/search-icon.png";
+import SearchIcon from "../../images/search.svg";
 class SearchBox extends React.Component{
     render(){
     return (

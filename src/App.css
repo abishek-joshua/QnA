@@ -1,17 +1,17 @@
 .app {
   font-family: 'Ubuntu';
-  display:grid;
-}
-.main-content{
-  display: flex;
-  
 }
 .questions-box{
-  margin: 2em;
-  padding: 1em;
-  border: 0.1em solid black;
+  padding: 2em;
+  margin: 0em 1em;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
   border-radius: 1em;
-  width: 60%;
+  justify-content: space-between;
+}
+.questions-box-header{
+  padding:1em;
 }
 .sort-by{
   border: 0.2em solid ;

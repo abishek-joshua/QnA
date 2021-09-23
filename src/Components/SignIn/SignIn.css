@@ -1,15 +1,25 @@
 .SignIn{
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     color: black;
+    border: 5px inset blueviolet ;
+    margin: 2em;
+    padding: 1em;
+    width: 25%;
+    border-radius: 1em;
+    align-self: center;
+   
 }
 
 .formDetails {
     padding: 1em;
-    margin: em;
+    margin: 1em;
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    justify-content: space-evenly;
     font-size: 30px;
     
 }
@@ -23,13 +33,47 @@
     background-color:white;
     color: black;
     margin: 1em;
+    font-weight: bolder;
+    cursor: pointer;
+    
 }
 
 .email-box,.password-box {
+    font-size: 15px;
+    height: 1em;
     width: 20em;
-    border: 1.5px solid blue;
-    border-radius: 1em;
-    height: 2em;
-    margin: 1em;
+    padding: 1em;
+    border: 1px solid black;
+    border-radius: 2em;
+    box-shadow: 0.1em 0.1em grey;
+    margin: 2em;
 
+
+}
+
+.main {
+    display: flex;
+    justify-content: center;    
+    margin: 0px;
+}
+
+.register,.forgot-password  {
+    font-size: 17px;
+    cursor: pointer;
+    color: blue;
+    margin: 1em;
+}
+
+.register:hover, .forgot-password:hover{
+    text-decoration: underline;
+}
+
+
+.SignInButton:hover{
+    background-color: blueviolet;
+    color: white;
+}
+
+.reg-and-forget {
+    display: flex;
 }

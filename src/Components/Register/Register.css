@@ -4,7 +4,7 @@
     margin: 0px;
 }
 
-.Register {
+.register {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,27 +13,25 @@
     border: 5px inset blueviolet ;
     margin: 2em;
     padding: 1em;
-    width: 25%;
     border-radius: 1em;
     align-self: center;
 }
 
-.formDetails {
+.form-details {
     padding: 1em;
     margin: 1em;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    font-size: 30px;
+    font-size: 20px;
     
 }
 
 .register-button {
     font-family: 'Ubuntu';
-    font-size:20px;
-    height: 1.5em;
-    width: 5em;
+    font-size:15px;
+    padding: 0.5em;
     border-radius: 0.5em;
     background-color:white;
     color: black;
@@ -43,7 +41,7 @@
     
 }
 
-.email-box,.password-box {
+.email-box,.password-box,.confirm-password-box {
     font-size: 15px;
     height: 1em;
     width: 20em;
@@ -51,7 +49,7 @@
     border: 1px solid black;
     border-radius: 2em;
     box-shadow: 0.1em 0.1em grey;
-    margin: 2em;
+    margin: 1em;
 
 
 }
@@ -60,7 +58,7 @@
     font-size: 17px;
     cursor: pointer;
     color: blue;
-    margin: 1em;
+
 }
 
 .sign-in:hover {
@@ -71,3 +69,4 @@
     background-color: blueviolet;
     color: white;
 }
+

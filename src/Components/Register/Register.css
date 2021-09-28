@@ -1,4 +1,10 @@
-.SignIn{
+.main {
+    display: flex;
+    justify-content: center;    
+    margin: 0px;
+}
+
+.Register {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,7 +16,6 @@
     width: 25%;
     border-radius: 1em;
     align-self: center;
-   
 }
 
 .formDetails {
@@ -24,11 +29,11 @@
     
 }
 
-.SignInButton {
+.register-button {
     font-family: 'Ubuntu';
     font-size:20px;
     height: 1.5em;
-    width: 4em;
+    width: 5em;
     border-radius: 0.5em;
     background-color:white;
     color: black;
@@ -51,29 +56,18 @@
 
 }
 
-.main {
-    display: flex;
-    justify-content: center;    
-    margin: 0px;
-}
-
-.register,.forgot-password  {
+.sign-in {
     font-size: 17px;
     cursor: pointer;
     color: blue;
     margin: 1em;
 }
 
-.register:hover, .forgot-password:hover{
+.sign-in:hover {
     text-decoration: underline;
 }
 
-
-.SignInButton:hover{
+.register-button:hover{
     background-color: blueviolet;
     color: white;
-}
-
-.reg-and-forget {
-    display: flex;
 }

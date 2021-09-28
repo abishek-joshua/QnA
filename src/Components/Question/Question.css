@@ -1,11 +1,10 @@
 .question-container{
     border-radius: 1em;
     margin: 0.5em;
-    width: 70%;
 }
 .question-statement{
     color: blueviolet;
-    font-size: 25px;
+    font-size: 20px;
     padding-left: 10px;
     margin: 0px;
 }

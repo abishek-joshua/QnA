@@ -1,25 +1,26 @@
 .app {
   font-family: 'Ubuntu';
-  display:grid;
-}
-.qna-title{
-  font-size: 50px;
-  color: blue;
-  text-align: center;
 }
 .questions-box{
-  margin: 2em;
-  padding: 1em;
-  border: 0.1em solid black;
+  padding: 2em;
+  margin: 0em 1em;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
   border-radius: 1em;
-  width: 60%;
+  justify-content: space-between;
+}
+.questions-box-header{
+  padding:1em;
 }
 .sort-by{
   border: 0.2em solid ;
   border-radius: 1em;
   font-family:'Ubuntu','Times New Roman', Times, serif;
   float:right;
+  padding: 0.2em;
 }
+
 select:focus{
   outline: none;
 }

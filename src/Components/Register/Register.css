@@ -1,0 +1,73 @@
+.main {
+    display: flex;
+    justify-content: center;    
+    margin: 0px;
+}
+
+.Register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: black;
+    border: 5px inset blueviolet ;
+    margin: 2em;
+    padding: 1em;
+    width: 25%;
+    border-radius: 1em;
+    align-self: center;
+}
+
+.formDetails {
+    padding: 1em;
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 30px;
+    
+}
+
+.register-button {
+    font-family: 'Ubuntu';
+    font-size:20px;
+    height: 1.5em;
+    width: 5em;
+    border-radius: 0.5em;
+    background-color:white;
+    color: black;
+    margin: 1em;
+    font-weight: bolder;
+    cursor: pointer;
+    
+}
+
+.email-box,.password-box {
+    font-size: 15px;
+    height: 1em;
+    width: 20em;
+    padding: 1em;
+    border: 1px solid black;
+    border-radius: 2em;
+    box-shadow: 0.1em 0.1em grey;
+    margin: 2em;
+
+
+}
+
+.sign-in {
+    font-size: 17px;
+    cursor: pointer;
+    color: blue;
+    margin: 1em;
+}
+
+.sign-in:hover {
+    text-decoration: underline;
+}
+
+.register-button:hover{
+    background-color: blueviolet;
+    color: white;
+}

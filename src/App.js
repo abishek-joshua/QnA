@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import Question from './Components/Question/Question';
 import Navigation from './Components/Navigation/Navigation';
+import Register from './Components/Register/Register';
+import SignIn from './Components/SignIn/SignIn';
 
 class App extends React.Component{
   render(){
@@ -24,6 +26,8 @@ class App extends React.Component{
           <Question questionStatement="Where can i get Bonafide?"/>
           <Question questionStatement="How many days will be there in between semester exams?"/>
         </div>
+        <Register />
+        <SignIn />
 
       </div>
     );

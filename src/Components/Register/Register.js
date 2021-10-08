@@ -1,21 +1,26 @@
 import React from "react";
 import './Register.css';
-
-const Register = () => {
-    return (
-        <div className="main">
-            <div className="register">
+import { Link } from "react-router-dom";
+class Register extends React.Component {
+    render(){
+        return (
+            <div className="register-box">
                 <h1>Register</h1>
-                <div className="form-details">
-                    <strong>Email</strong> <input className="email-box" type="email" placeholder="xyz@student.tce.edu"></input>
-                    <strong>Password</strong> <input className="password-box" type="password"></input>
-                    <strong> Confirm Password</strong> <input className="confirm-password-box" type="password"></input>
-                    <button className="register-button">Register</button>
-                    <p className="sign-in">Already have an account?</p>
-                </div>
+                    <label for="email-box">Email</label> 
+                        <input id="email-box" type="email" placeholder="xyz@student.tce.edu"></input>
+
+                    <label for="password-box">Password</label>
+                         <input id="password-box" type="password"></input>
+                    
+                    <label for="confirm-password-box">confirm Password</label>
+                     <input id="confirm-password-box" type="password"></input>
+
+                    <button>Register</button>
+
+                    <Link to='/signin'>Already have an account?</Link>
             </div>
-        </div>
     );
+    }
 }
 
 export default Register;

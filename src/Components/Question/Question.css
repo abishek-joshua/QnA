@@ -1,5 +1,6 @@
 .question-container{
-    border-radius: 1em;
+    border: var(--qna-border);
+    border-radius: var(--qna-border-radius);
     margin: 0.5em;
 }
 .question-statement{

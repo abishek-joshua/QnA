@@ -1,26 +1,51 @@
-.app {
-  font-family: 'Ubuntu';
-}
-.questions-box{
-  padding: 2em;
-  margin: 0em 1em;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid black;
-  border-radius: 1em;
-  justify-content: space-between;
-}
-.questions-box-header{
-  padding:1em;
-}
-.sort-by{
-  border: 0.2em solid ;
-  border-radius: 1em;
-  font-family:'Ubuntu','Times New Roman', Times, serif;
-  float:right;
-  padding: 0.2em;
+:root{
+  --main-color: blueviolet;
+  --main-bg: linear-gradient(0deg, rgba(242,232,255,1) 0%, rgb(171, 110, 245) 100%);
+  --qna-border: 2px inset var(--main-color);
+  --qna-border-radius: 1em;
+  --qna-font: Ubuntu;
+
 }
 
-select:focus{
-  outline: none;
+
+
+a:visited{
+  color: blue;
+}
+button{
+    font: var(--qna-font);
+    border: var(--qna-border);
+    border-radius: var(--qna-border-radius);
+    background-color: var(--main-color);
+    color: white;
+    cursor: pointer;
+    margin: 0.5em;
+}
+
+button:active{
+  transform: scale(1.1,1.1);
+  filter: brightness(1.1);
+}
+input{
+  font: var(--qna-font);
+  font-size: 15px;
+  padding: 0.5em;
+  margin: 0.5em;
+  border: var(--qna-border);
+  border-radius: var(--qna-border-radius);
+}
+
+label{
+  font-weight:bold;
+  margin: 0.5em;
+}
+
+nav{
+  display: flexbox;
+  align-items: flex-end;
+}
+.app {
+  font-family: var(--qna-font);
+  display: flexbox;
+  align-items: center;
 }

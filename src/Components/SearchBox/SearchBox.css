@@ -8,8 +8,8 @@
     height: 1em;
     width: 20em;
     padding: 1em;
-    border: 1px solid black;
-    border-radius: 2em;
+    border: var(--qna-border);
+    border-radius: var(--qna-border-radius);
     box-shadow: 0.1em 0.1em grey;
 }
 

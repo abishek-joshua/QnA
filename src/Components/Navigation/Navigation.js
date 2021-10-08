@@ -8,7 +8,6 @@ import home from "../../images/home.svg";
 class Navigation extends React.Component{
     render() {
         return(
-            <div>
                 <nav className="navigation">
                     <div className="qna-title">QnA</div>
                     <SearchBox/>
@@ -21,8 +20,6 @@ class Navigation extends React.Component{
                         <img  className = "profile" alt="profile" src={profile}/>
                     </div>
                 </nav>
-            </div>
-
         );
     }
 }

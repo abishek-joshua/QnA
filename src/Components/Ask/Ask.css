@@ -4,15 +4,16 @@
     align-items: center;
     height: 15em;
     width: 15em;
-    border-radius: 0.5em;
-    border: 1px solid black;
+    border: var(--qna-border);
+    border-radius: var(--qna-border-radius);
 }
 .post-button{
     font-family: 'Ubuntu';
     font-size:15px;
     height: 1.5em;
     width: 3em;
-    border-radius: 0.5em;
+    border: var(--qna-border);
+    border-radius: var(--qna-border-radius);
     background-color:white;
     color: rgb(94, 91, 91);
     margin: 1em;

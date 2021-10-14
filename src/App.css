@@ -1,26 +1,73 @@
-.app {
-  font-family: 'Ubuntu';
-}
-.questions-box{
-  padding: 2em;
-  margin: 0em 1em;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid black;
-  border-radius: 1em;
-  justify-content: space-between;
-}
-.questions-box-header{
-  padding:1em;
-}
-.sort-by{
-  border: 0.2em solid ;
-  border-radius: 1em;
-  font-family:'Ubuntu','Times New Roman', Times, serif;
-  float:right;
-  padding: 0.2em;
+:root{
+  --main-color-hue: 0, 100% ;
+  --main-bg-color: hsl(var(--main-color-hue),95%);
+  --qna-border: 1px solid var(--main-color);
+  --qna-border-radius: 0.5em;
+  --qna-font: Ubuntu;
+  --qna-outline: 0.1em solid var(--main-color);
 }
 
-select:focus{
-  outline: none;
+body{
+  margin: 0;
+}
+
+input{
+  font: var(--qna-font);
+  font-size: 15px;
+  padding: 0.5em;
+  margin: 0.5em;
+  border: var(--qna-border);
+  border-radius: var(--qna-border-radius);
+}
+
+input:focus, textarea:focus{
+  outline: var(--qna-outline);
+}
+
+select {
+  font: var(--qna-font);
+  margin: 0.5em;
+  border: var(--qna-border);
+  border-radius: var(--qna-border-radius);
+}
+
+label{
+  font-weight:bold;
+  margin: 0.5em;
+}
+
+.app {
+  font-family: var(--qna-font);
+}
+
+.icon-button{
+  height: 1.5em;
+  margin: 1em;
+  padding: 10px;
+}
+
+.icon-button:active{
+  transform: scale(1.1,1.1);
+  filter: brightness(1.1);
+}
+
+.submit-button{
+  font: var(--qna-font);
+  border: var(--qna-border);
+  border-radius: var(--qna-border-radius);
+  background-color: white;
+  color: var(--main-color);
+  cursor: pointer;
+  margin: 0.5em;
+  padding: 0.5em;
+}
+
+.submit-button:hover{
+  background-color: var(--main-color);
+  color: white;
+}
+
+.submit-button:active{
+  transform: scale(1.1,1.1);
+  filter: brightness(1.1);
 }

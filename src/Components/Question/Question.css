@@ -1,16 +1,7 @@
 .question-container{
-    border-radius: 1em;
+    padding: 0.5em;
     margin: 0.5em;
-}
-.question-statement{
-    color: blueviolet;
-    font-size: 20px;
-    padding-left: 10px;
-    margin: 0px;
-}
-.answers-and-time{
-    font-size: 15px;
-    padding:10px;
-    margin: 0px;
-    color: darkgray;
+    border: var(--qna-border);
+    border-radius: var(--qna-border-radius);
+    background-color: var(--main-bg-color);
 }

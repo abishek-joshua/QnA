@@ -1,0 +1,9 @@
+.home{
+    display: flex;
+    flex-direction: column;
+}
+.questions-box-header{
+    display: flex;
+    margin: 1em;
+    justify-content: space-between;
+}

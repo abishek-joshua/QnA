@@ -1,13 +1,16 @@
 import React from 'react';
 import './Ask.css';
-
+import Navigation from '../Navigation/Navigation';
 class Ask extends React.Component {
     render() {
         return (
-            <div className="ask-box">
-                <p className="ask-a-question">Ask a Question Here</p>
-                <textarea className="question-asked" placeholder="?"/>
-                <button className="post-button">Post</button>
+            <div className="ask">
+                <Navigation />
+                <div className="ask-box">
+                    <label for="question-asked">Ask a Question Here</label>
+                    <textarea id="question-asked" rows="10" cols="50" />
+                    <button className="submit-button">Post</button>
+                </div>
             </div>
         );
     }

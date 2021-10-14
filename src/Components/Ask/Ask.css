@@ -1,36 +1,21 @@
+.ask{
+    display: flex;
+    flex-direction: column;
+}
+
 .ask-box{
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    height: 15em;
-    width: 15em;
-    border: var(--qna-border);
-    border-radius: var(--qna-border-radius);
-}
-.post-button{
-    font-family: 'Ubuntu';
-    font-size:15px;
-    height: 1.5em;
-    width: 3em;
-    border: var(--qna-border);
-    border-radius: var(--qna-border-radius);
-    background-color:white;
-    color: rgb(94, 91, 91);
     margin: 1em;
 }
-.ask-a-question{
-    font-size: 20px;
-    color:darkviolet;
-}
-.post-button:hover{
-    background-color: darkorchid;
-    cursor: pointer;
-    color: white;
-}
-.question-asked{
-    padding: 1em;
-    color:slateblue;
-    width: 12em;
-    height: 8em;
-    resize: none;
+
+#question-asked{
+    font: var(--qna-font);
+    font-size: 15px;
+    padding: 0.5em;
+    margin: 1em;
+    width: 20em;
+    border: var(--qna-border);
+    border-radius: var(--qna-border-radius);  
 }

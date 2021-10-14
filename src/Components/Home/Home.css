@@ -1,22 +1,9 @@
 .home{
-  background-color: var(--main-bg);
-}
-.questions-box{
-  padding: 2em;
-  margin: 0em 1em;
-  display: flex;
-  flex-direction: column;
-  border: var(--qna-border);
-  border-radius: var(--qna-border-radius);
-  justify-content: space-between;
+    display: flex;
+    flex-direction: column;
 }
 .questions-box-header{
-  padding:1em;
-}
-.sort-by{
-  border: var(--qna-border);
-  border-radius: var(--qna-border-radius);
-  font-family:'Ubuntu','Times New Roman', Times, serif;
-  float:right;
-  padding: 0.2em;
+    display: flex;
+    margin: 1em;
+    justify-content: space-between;
 }

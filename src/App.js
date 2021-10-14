@@ -4,6 +4,8 @@ import { Route } from 'react-router-dom';
 import Home from './Components/Home/Home';
 import Register from './Components/Register/Register';
 import SignIn from './Components/SignIn/SignIn';
+import Ask from './Components/Ask/Ask';
+
 class App extends React.Component{
   render(){
     return (
@@ -16,6 +18,9 @@ class App extends React.Component{
         </Route>
         <Route exact path="/signin">
           <SignIn />
+        </Route>
+        <Route exact path="/ask">
+          <Ask/>
         </Route>
       </div>
     );

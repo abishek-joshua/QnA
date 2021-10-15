@@ -4,8 +4,8 @@
     align-items: center;
     border: var(--qna-border);
     border-radius: var(--qna-border-radius);
-    background-color: var(--main-bg-color);
+    background-image: var(--main-bg-gradient);
     padding: 3em;
     width: fit-content;
-    margin: 5em auto;
+    margin: 5rem auto;
 }

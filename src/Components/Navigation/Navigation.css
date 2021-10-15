@@ -1,14 +1,38 @@
-nav{
+.sticky-nav{
   display: flex;
   justify-items:center;
   align-items: center;
-  border-radius: var(--qna-border-radius);
-  align-self: center;
-  background: var(--main-bg-color);
+  justify-content: space-between;
+  background-color: var(--main-color);
+  position: sticky;
+  top: 0;
 }
 
-.sticky-nav{
-  background-color: var(--main-color);
+.app-title{
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0.9rem 5rem;
+  color: white;
+}
+
+.icon-button-desc{
+  font-weight: bold;
   display: flex;
-  
+  align-items: center;
+  color: white;
+  padding: 1em;
+  cursor: pointer;
+  transition: all;
+}
+
+.icon-button-desc:hover{
+  background-color: hsl(var(--h), var(--s), 25%);
+}
+
+.icon-button-desc:active{
+  transform: scale(1.1,1.1);
+}
+
+.nav-right{
+  display: flex;
 }

@@ -2,8 +2,9 @@
     display: flex;
     flex-direction: column;
 }
+
 .questions-box-header{
     display: flex;
-    margin: 1em;
+    margin: 1rem;
     justify-content: space-between;
 }

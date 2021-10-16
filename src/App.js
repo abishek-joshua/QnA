@@ -13,7 +13,7 @@ class App extends React.Component{
         <Route exact path="/">
           <Home />
         </Route>
-        <Route exact path="/register">
+        <Route exact path="/register"> 
           <Register/>
         </Route>
         <Route exact path="/signin">

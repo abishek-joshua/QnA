@@ -8,7 +8,7 @@ class Home extends React.Component {
     return (
       <div className="home">
         <Navigation />
-        <div className="questions-box">
+        <div className="questions-box">   
           <div className="questions-box-header">
             <h2>Explore...</h2>
             <select>

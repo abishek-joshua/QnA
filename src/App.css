@@ -1,23 +1,36 @@
 :root{
-  --main-color-hue: 0, 100% ;
-  --main-bg-color: hsl(var(--main-color-hue),95%);
-  --qna-border: 1px solid var(--main-color);
-  --qna-border-radius: 0.5em;
-  --qna-font: Ubuntu;
-  --qna-outline: 0.1em solid var(--main-color);
+  --h: 200;
+  --s: 100%;
+  --l: 30%;
+  --main-color: hsl(var(--h), var(--s), var(--l));
+  --main-bg-gradient: linear-gradient(hsl(var(--h),var(--s),90%), hsl(var(--h),var(--s),100%));
+  --qna-border: 2px solid var(--main-color);
+  --qna-border-radius: 0.5rem;
+  --qna-font: 'IBM Plex Sans';
+  --qna-outline: 2px solid hsl(var(--h), var(--s), 90%);
+  --question-link-color: hsl(210, 100%, 50%);
 }
 
 body{
   margin: 0;
 }
 
-input{
+a{
+  text-decoration: none;
+  color: hsl(var(--h), var(--s), 30%);
+}
+
+input, textarea{
   font: var(--qna-font);
   font-size: 15px;
   padding: 0.5em;
-  margin: 0.5em;
+  margin: 0.5rem;
   border: var(--qna-border);
   border-radius: var(--qna-border-radius);
+}
+
+textarea{
+  resize: none;
 }
 
 input:focus, textarea:focus{
@@ -26,29 +39,19 @@ input:focus, textarea:focus{
 
 select {
   font: var(--qna-font);
-  margin: 0.5em;
+  margin: 1rem;
+  padding: 0.5em;
   border: var(--qna-border);
   border-radius: var(--qna-border-radius);
 }
 
 label{
   font-weight:bold;
-  margin: 0.5em;
+  margin: 0.5rem;
 }
 
 .app {
   font-family: var(--qna-font);
-}
-
-.icon-button{
-  height: 1.5em;
-  margin: 1em;
-  padding: 10px;
-}
-
-.icon-button:active{
-  transform: scale(1.1,1.1);
-  filter: brightness(1.1);
 }
 
 .submit-button{
@@ -58,7 +61,7 @@ label{
   background-color: white;
   color: var(--main-color);
   cursor: pointer;
-  margin: 0.5em;
+  margin: 0.5rem;
   padding: 0.5em;
 }
 

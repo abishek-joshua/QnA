@@ -5,6 +5,25 @@
 
 .questions-box-header{
     display: flex;
-    margin: 1rem;
     justify-content: space-between;
+    align-items: center;
 }
+
+.explore{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.questions-box{
+    display:grid ;
+    grid-template-columns: 1fr 1fr;
+    margin: 1rem;
+}
+
+@media (max-width: 500px){
+    .questions-box{
+        grid-template-columns: 1fr;
+    }
+   }
+  

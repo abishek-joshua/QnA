@@ -1,12 +1,31 @@
 .question-container{
     padding: 0.5em;
-    margin: 0.5rem;
-    border: var(--qna-border);
-    border-radius: var(--qna-border-radius);
-    background-image: var(--main-bg-gradient);
+    margin: 0.1rem;
+    border: 1px solid var(--main-color);
+    box-sizing: border-box;
 }
 
 .question-statement{
+    font-weight: bold;
     color: var(--question-link-color);
-    font-size: 20px;
+}
+
+.question-details{
+  display: flex;
+  justify-content: space-between;
+}
+
+.question-statement:hover{
+    filter: brightness(1.2);
+}
+
+.answers-and-time{
+    font-size: 0.8rem;
+    color: hsl(0, 0%, 50%);
+    margin: 0.5rem 0;
+}
+
+.user{
+  display: flex;
+  align-items: center;
 }

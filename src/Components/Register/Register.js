@@ -6,14 +6,14 @@ class Register extends React.Component {
         return (
             <div className="register-box">
                 <h1>Register</h1>
+                <label for="roll-number-box">Roll Number</label>
+                <input id="roll-number-box" type="email" placeholder="61000"></input>
+
                 <label for="email-box">Email</label>
                 <input id="email-box" type="email" placeholder="xyz@student.tce.edu"></input>
 
                 <label for="password-box">Password</label>
                 <input id="password-box" type="password"></input>
-
-                <label for="confirm-password-box">confirm Password</label>
-                <input id="confirm-password-box" type="password"></input>
 
                 <button className="submit-button" >Register</button>
 

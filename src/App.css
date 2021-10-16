@@ -1,14 +1,14 @@
 :root{
-  --h: 140;
+  --h: 200;
   --s: 100%;
   --l: 30%;
   --main-color: hsl(var(--h), var(--s), var(--l));
-  --main-bg-gradient: linear-gradient(hsl(var(--h),var(--s),95%), hsl(var(--h),var(--s),99%));
+  --main-bg-gradient: linear-gradient(hsl(var(--h),var(--s),90%), hsl(var(--h),var(--s),100%));
   --qna-border: 2px solid var(--main-color);
   --qna-border-radius: 0.5rem;
-  --qna-font: Ubuntu;
+  --qna-font: 'IBM Plex Sans';
   --qna-outline: 2px solid hsl(var(--h), var(--s), 90%);
-  --question-link-color: hsl(280, 100%, 50%);
+  --question-link-color: hsl(210, 100%, 50%);
 }
 
 body{
@@ -39,7 +39,8 @@ input:focus, textarea:focus{
 
 select {
   font: var(--qna-font);
-  margin: 0.5rem;
+  margin: 1rem;
+  padding: 0.5em;
   border: var(--qna-border);
   border-radius: var(--qna-border-radius);
 }

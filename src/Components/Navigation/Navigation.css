@@ -1,7 +1,6 @@
 .sticky-nav{
   display: flex;
   justify-items:center;
-  align-items: center;
   justify-content: space-between;
   background-color: var(--main-color);
   position: sticky;
@@ -11,7 +10,7 @@
 .app-title{
   font-size: 30px;
   font-weight: bold;
-  margin: 0.9rem 5rem;
+  margin: 1rem;
   color: white;
 }
 
@@ -35,4 +34,16 @@
 
 .nav-right{
   display: flex;
+  justify-content:space-evenly;
+  align-items: center;
 }
+
+@media (max-width: 500px){
+  .sticky-nav{
+     flex-direction: column;
+     align-items: center;
+   }
+ }
+
+
+

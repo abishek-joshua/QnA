@@ -9,11 +9,7 @@ class Home extends React.Component {
 
       <div className="home">
         <Navigation />
-<<<<<<< HEAD
-        <div className="questions-box">   
-=======
         <div className="feed">
->>>>>>> cbdacdf12e976d7b38c9dc7350b40f65c75c0df8
           <div className="questions-box-header">
             <div className="explore">Explore...</div>
             <select>

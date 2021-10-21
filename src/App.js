@@ -9,19 +9,18 @@ import Ask from './Components/Ask/Ask';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    var q = [
-      {
-        "id": 1,
-        "creation_date": "2021-03-09T18:30:00.000Z",
-        "question_text": "sed augue aliquam erat volutpat in congue etiam justo etiam pretium?",
-        "roll_number": 70010,
-        "answer_count": 0
-      }
-    ]
     this.state = {
-      questions: q
+      questions : []
     }
+    
+    fetch('http://localhost:3000/')
+      .then(res => res.json())
+      .then(res => {this.setState(
+        {questions:res}
+      )})
+
   }
+
   render() {
     return (
       <div className="app">

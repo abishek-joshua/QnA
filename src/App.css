@@ -1,12 +1,12 @@
 :root{
-  --h: 200;
+  --h: 270;
   --s: 100%;
   --l: 30%;
   --main-color: hsl(var(--h), var(--s), var(--l));
   --main-bg-gradient: linear-gradient(hsl(var(--h),var(--s),90%), hsl(var(--h),var(--s),100%));
   --qna-border: 2px solid var(--main-color);
   --qna-border-radius: 0.5rem;
-  --qna-font: 'IBM Plex Sans';
+  --qna-font: 'ubuntu';
   --qna-outline: 2px solid hsl(var(--h), var(--s), 90%);
   --question-link-color: hsl(210, 100%, 50%);
 }

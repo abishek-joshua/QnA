@@ -6,7 +6,6 @@ import Navigation from '../Navigation/Navigation';
 class Home extends React.Component {
   render() {
     return (
-
       <div className="home">
         <Navigation />
         <div className="feed">
@@ -19,16 +18,7 @@ class Home extends React.Component {
             </select>
           </div>
           <div className="questions-box">
-            <Question questionStatement="what happens at Tech Utsav?" />
-            <Question questionStatement="How will i get OD?" />
-            <Question questionStatement="What is a Tech stack?" />
-            <Question questionStatement="Where can i get Bonafide?" />
-            <Question questionStatement="How many days will be there in between semester exams?" />
-            <Question questionStatement="what happens at Tech Utsav?" />
-            <Question questionStatement="How will i get OD?" />
-            <Question questionStatement="What is a Tech stack?" />
-            <Question questionStatement="Where can i get Bonafide?" />
-            <Question questionStatement="How many days will be there in between semester exams?" />
+            {this.props.questions.map((ele, ind) => <Question key={ind} question={ele} />)}
           </div>
         </div>
       </div>

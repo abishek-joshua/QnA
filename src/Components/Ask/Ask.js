@@ -15,12 +15,13 @@ class Ask extends React.Component {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 question_text: question_text,
-                roll_number: 70001
+                roll_number: this.props.roll_number
             })
         })
             .then(res => res.json())
             .then(console.log)
         this.setState({ asked: true });
+        alert("Question Posted")
     }
 
     render() {

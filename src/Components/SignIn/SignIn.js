@@ -4,18 +4,38 @@ import './Signin.css';
 import { Link } from "react-router-dom";
 class Signin extends React.Component {
     onClickSignin = () => {
-        this.props.login({ roll_number: 70007 });
-        this.props.history.push('/');
+        let roll_number = document.getElementById('roll-number-box').value;
+        let password = document.getElementById('password-box').value;
+        fetch('http://localhost:3000/signin', {
+            method : 'POST',
+            headers : {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+                roll_number: roll_number,
+                password: password
+            })
+        } )
+        .then( res => res.json())
+        .then( res => {
+            if(res === "Error Signing In..."){
+                window.alert("Invalid Credentials")
+            }
+            else {
+                this.props.login(res[0]);
+                this.props.history.push('/');
+            }
+        })
+        .catch(console.log)
+
+        
     }
     render() {
         return (
             <div className="signin-box">
                 <h1>Sign In</h1>
-                <label for="email-box">Email</label>
+                <label for="roll-number-box">Roll Number</label>
                 <input
-                    id="email-box"
-                    type="email"
-                    placeholder="xyz@student.tce.edu">
+                    id="roll-number-box"
+                    type="text">
                 </input>
 
                 <label for="password-box">Password</label>

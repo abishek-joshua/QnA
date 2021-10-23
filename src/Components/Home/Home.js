@@ -16,7 +16,7 @@ class Home extends React.Component {
                 </Route>
 
                 <Route exact path='/ask'>
-                    <Ask />
+                    <Ask roll_number = {this.props.user.roll_number} />
                 </Route>
 
             </div >

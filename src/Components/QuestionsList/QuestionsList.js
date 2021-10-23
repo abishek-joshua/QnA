@@ -16,7 +16,7 @@ class QuestionsList extends React.Component {
     }
 
     fetchQuestions = () => {
-        fetch('http://localhost:3000/main/questions-list')
+        fetch('http://localhost:3000/')
             .then(res => res.json())
             .then(res => {
                 console.log(res);

@@ -1,7 +1,12 @@
 import React from "react";
-import './SignIn.css';
+import { withRouter } from 'react-router';
+import './Signin.css';
 import { Link } from "react-router-dom";
-class SignIn extends React.Component {
+class Signin extends React.Component {
+    onClickSignin = () => {
+        this.props.login({ roll_number: 70007 });
+        this.props.history.push('/');
+    }
     render() {
         return (
             <div className="signin-box">
@@ -16,11 +21,10 @@ class SignIn extends React.Component {
                 <label for="password-box">Password</label>
                 <input id="password-box" type="password"></input>
 
-                <Link to='/'>
-                    <button className="submit-button" onClick="">
-                        Signin
-                    </button>
-                </Link>
+                <button className="submit-button" onClick={this.onClickSignin}>
+                    Signin
+                </button>
+
                 <Link to='/register'>
                     create account?
                 </Link>
@@ -29,4 +33,4 @@ class SignIn extends React.Component {
     }
 }
 
-export default SignIn;
+export default withRouter(Signin);

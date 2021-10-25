@@ -22,11 +22,10 @@ class Signin extends React.Component {
         })
             .then(res => res.json())
             .then(res => {
-                if (res === "success") {                   
+                if (res === "success") {
                     this.props.login(roll_number)
-                    console.log(roll_number)
                     this.setState({ validCredentials: true })
-                    
+
                 }
                 else {
                     alert("Invalid Credentials")

@@ -32,7 +32,11 @@ class QuestionsList extends React.Component {
                     </select>
                 </div>
                 <div className="questions-box">
-                    {this.state.questions.map((ele, ind) => <Question key={ind} question={ele} />)}
+                    {this.state.questions.map((ele, ind) =>
+                        <Question
+                            updateClickedQuestion={this.props.updateClickedQuestion}
+                            key={ind} question={ele}
+                        />)}
                 </div>
             </div>
         );

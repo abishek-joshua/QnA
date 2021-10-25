@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { withRouter } from 'react-router';
 import './Question.css';
 import avatar from '../../images/avatar.svg';
 
@@ -11,11 +10,12 @@ class Question extends React.Component {
     var time = Math.round((now - postedTime) / (1000 * 60 * 60));
     return (
       <div className="question-container">
-        <Link to={'/answers/' + this.props.question.id}>
-          <div className="question-statement">
+        <Link to='/answers'>
+          <div className="question-statement" onClick={() => this.props.updateClickedQuestion(this.props.question)} >
             {this.props.question.question_text}
           </div>
         </Link>
+
         <div className="question-details">
           <div className="answers-and-time">{this.props.question.answer_count} answers  . {time} hours ago</div>
           <div className="user">
@@ -23,10 +23,9 @@ class Question extends React.Component {
             {this.props.question.roll_number}
           </div>
         </div>
-
       </div >
     );
   }
 }
 
-export default withRouter(Question);
+export default Question;

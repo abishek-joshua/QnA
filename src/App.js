@@ -6,14 +6,14 @@ import Home from './Components/Home/Home';
 import { Route, Redirect } from 'react-router';
 
 const initialState = {
-  isSignedin:false,
-  roll_number:0
+  isSignedin: false,
+  roll_number: null
 }
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = Object.assign({},initialState);
+    this.state = Object.assign({}, initialState);
   }
 
   login = (loggedRollNumber) => {

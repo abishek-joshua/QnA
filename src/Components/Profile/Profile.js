@@ -1,18 +1,18 @@
 import React from 'react';
 import './Profile.css';
 
-const initialState = {user:{}};
+const initialState = { user: {} };
 
 class Profile extends React.Component {
     constructor(props) {
         super(props);
-        this.state = Object.assign({},initialState);
-      }
-      componentDidMount = () => {
-         this.updateUserDetails();
-      }
-    updateUserDetails = () =>{
-        // 
+        this.state = Object.assign({}, initialState);
+    }
+    componentDidMount = () => {
+        this.updateUserDetails();
+    }
+    updateUserDetails = () => {
+
         fetch('http://localhost:3000/profile', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -20,15 +20,9 @@ class Profile extends React.Component {
                 roll_number: this.props.roll_number
             })
         })
-        .then(res => res.json())
-        .then(res => {
-            if(res === 'error')
-                console.log(res)
-            else
-                 this.setState({user:res})
-
-            })
-        .catch(console.log)
+            .then(res => res.json())
+            .then(res => this.setState(prevState => Object.assign({}, res)))
+            .catch(console.log)
     }
     onClickUpdate = () => {
         var email = document.getElementById('email-box').value;
@@ -55,7 +49,7 @@ class Profile extends React.Component {
             })
             .catch(console.log)
 
-            this.updateUserDetails();
+        this.updateUserDetails();
     }
 
     render() {
@@ -66,7 +60,7 @@ class Profile extends React.Component {
                     <input
                         id="roll-number-box"
                         type="text"
-                        value={this.props.roll_number}
+                        value={this.state.user.roll_number}
                         disabled="disabled"
                     >
                     </input>
@@ -75,17 +69,24 @@ class Profile extends React.Component {
                     <input
                         id="email-box"
                         type="email"
-                        placeholder={this.props.user.email}>
+                        placeholder={this.state.user.email}
+                    >
                     </input>
 
                     <label htmlFor="user-name-box">Username</label>
                     <input
                         id="user-name-box"
                         type="text"
-                        placeholder={this.props.user.user_name}>
+                        placeholder={this.state.user.user_name}
+                    >
                     </input>
                     <label htmlFor="about-me-box">About Me</label>
-                    <textarea id="about-me-box" rows="5" cols="25" placeholder={this.props.user.about_me} />
+                    <textarea
+                        id="about-me-box"
+                        rows="5"
+                        cols="25"
+                        placeholder={this.state.user.about_me}
+                    />
                 </div>
 
                 <button className="submit-button" onClick={this.onClickUpdate}>

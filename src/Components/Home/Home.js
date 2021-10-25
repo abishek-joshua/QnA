@@ -6,6 +6,17 @@ import AnswersList from '../AnswersList/AnswersList';
 import Ask from '../Ask/Ask';
 import Profile from '../Profile/Profile';
 class Home extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            clickedQuestion: {}
+        }
+    }
+
+    updateClickedQuestion = (question) => {
+        this.setState({ clickedQuestion: question });
+    }
+
     render() {
         return (
             <div>
@@ -13,15 +24,16 @@ class Home extends React.Component {
                     <Navigation logout={this.props.logout} roll_number={this.props.roll_number} />
                 </Route>
 
-                <Route path='/profile/'>
-                    <Profile user={this.props.roll_number} />
+                <Route path='/profile'>
+                    <Profile roll_number={this.props.roll_number} />
                 </Route>
 
-                <Route path='/answers/'>
-                    <AnswersList />
+                <Route path='/answers' >
+                    <AnswersList roll_number={this.props.roll_number} question={this.state.clickedQuestion} />
                 </Route>
+
                 <Route exact path='/'>
-                    <QuestionsList />
+                    <QuestionsList updateClickedQuestion={this.updateClickedQuestion} />
                 </Route>
 
                 <Route exact path='/ask'>

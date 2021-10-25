@@ -22,7 +22,7 @@ class Signin extends React.Component {
         })
             .then(res => res.json())
             .then(res => {
-                if (res === "Error Signingin") {
+                if (res === "error ") {
                     alert("Invalid Credentials")
                 }
                 else {

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Prompt, Redirect } from 'react-router';
 import './Ask.css';
 class Ask extends React.Component {
     constructor(props) {
@@ -19,18 +20,18 @@ class Ask extends React.Component {
             })
         })
             .then(res => res.json())
-            .then(console.log)
-        this.setState({ asked: true });
-        alert("Question Posted")
+            .then(() => this.setState({ asked: true }));
     }
 
     render() {
         return (
-            <div className="ask">
-                <label for="question-asked">Ask a Question Here</label>
-                <textarea id="question-asked" rows="10" cols="50" />
-                <button onClick={this.onClickPost} className="submit-button">Post</button>
-            </div>
+            this.state.asked ? <Redirect to="/" /> :
+                <div className="ask">
+                    <label htmlFor="question-asked">Ask a Question Here</label>
+                    <textarea id="question-asked" rows="10" cols="50" />
+                    <button onClick={this.onClickPost} className="submit-button">Post</button>
+                    <Prompt message="Are you sure want to navigate?" />
+                </div>
         );
     }
 }

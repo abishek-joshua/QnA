@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import { withRouter } from 'react-router';
 import './Question.css';
 import avatar from '../../images/avatar.svg';
 
@@ -11,7 +11,7 @@ class Question extends React.Component {
     var time = Math.round((now - postedTime) / (1000 * 60 * 60));
     return (
       <div className="question-container">
-        <Link to={'/question/' + this.props.question.id}>
+        <Link to={'/answers/' + this.props.question.id}>
           <div className="question-statement">
             {this.props.question.question_text}
           </div>
@@ -29,4 +29,4 @@ class Question extends React.Component {
   }
 }
 
-export default Question;
+export default withRouter(Question);

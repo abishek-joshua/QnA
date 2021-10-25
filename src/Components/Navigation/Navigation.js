@@ -33,7 +33,7 @@ class Navigation extends React.Component {
                         Logout
                     </div>
 
-                    <Link to='/profile/:id'>
+                    <Link to={'/profile/' + this.props.user.roll_number}>
                         <div className="icon-button-desc">
                             <img className="icon-button" alt="profile" src={profile} />
                             {this.props.user.roll_number}

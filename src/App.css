@@ -1,7 +1,7 @@
 :root{
   --h: 270;
   --s: 100%;
-  --l: 25%;
+  --l: 35%;
   --main-color: hsl(var(--h), var(--s), var(--l));
   --main-bg-gradient: linear-gradient(hsl(var(--h),var(--s),90%), hsl(var(--h),var(--s),100%));
   --qna-border: 2px solid var(--main-color);

@@ -12,14 +12,9 @@ class QuestionsList extends React.Component {
     }
 
     componentDidMount() {
-        this.fetchQuestions();
-    }
-
-    fetchQuestions = () => {
         fetch('http://localhost:3000/')
             .then(res => res.json())
             .then(res => {
-                console.log(res);
                 this.setState({ questions: res }
                 )
             })

@@ -1,13 +1,13 @@
 import React from 'react';
 
-class Answers extends React.Component {
+class AnswersList extends React.Component {
     render() {
         return (
             <div>
-
+                am;mafmfqnfeibeifa
             </div>
         );
     }
 }
 
-export default Answers;
+export default AnswersList;

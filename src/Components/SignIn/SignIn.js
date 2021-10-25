@@ -22,12 +22,14 @@ class Signin extends React.Component {
         })
             .then(res => res.json())
             .then(res => {
-                if (res === "error ") {
-                    alert("Invalid Credentials")
+                if (res === "success") {                   
+                    this.props.login(roll_number)
+                    console.log(roll_number)
+                    this.setState({ validCredentials: true })
+                    
                 }
                 else {
-                    this.setState({ validCredentials: true })
-                    this.props.login(res[0])
+                    alert("Invalid Credentials")
                 }
             })
             .catch(console.log)

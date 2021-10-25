@@ -1,7 +1,35 @@
 import React from 'react';
 import './Profile.css';
-class Profile extends React.Component {
 
+const initialState = {user:{}};
+
+class Profile extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = Object.assign({},initialState);
+      }
+      componentDidMount = () => {
+         this.updateUserDetails();
+      }
+    updateUserDetails = () =>{
+        // 
+        fetch('http://localhost:3000/profile', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                roll_number: this.props.roll_number
+            })
+        })
+        .then(res => res.json())
+        .then(res => {
+            if(res === 'error')
+                console.log(res)
+            else
+                 this.setState({user:res})
+
+            })
+        .catch(console.log)
+    }
     onClickUpdate = () => {
         var email = document.getElementById('email-box').value;
         var user_name = document.getElementById('user-name-box').value;
@@ -10,7 +38,7 @@ class Profile extends React.Component {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                roll_number: this.props.user.roll_number,
+                roll_number: this.props.roll_number,
                 email: email,
                 user_name: user_name,
                 about_me: about_me
@@ -26,6 +54,8 @@ class Profile extends React.Component {
                 }
             })
             .catch(console.log)
+
+            this.updateUserDetails();
     }
 
     render() {
@@ -36,7 +66,7 @@ class Profile extends React.Component {
                     <input
                         id="roll-number-box"
                         type="text"
-                        value={this.props.user.roll_number}
+                        value={this.props.roll_number}
                         disabled="disabled"
                     >
                     </input>

@@ -10,11 +10,11 @@ class Home extends React.Component {
         return (
             <div>
                 <Route>
-                    <Navigation logout={this.props.logout} user={this.props.user} />
+                    <Navigation logout={this.props.logout} roll_number={this.props.roll_number} />
                 </Route>
 
                 <Route path='/profile/'>
-                    <Profile user={this.props.user} />
+                    <Profile user={this.props.roll_number} />
                 </Route>
 
                 <Route path='/answers/'>
@@ -25,7 +25,7 @@ class Home extends React.Component {
                 </Route>
 
                 <Route exact path='/ask'>
-                    <Ask roll_number={this.props.user.roll_number} />
+                    <Ask roll_number={this.props.roll_number} />
                 </Route>
 
             </div >

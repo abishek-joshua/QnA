@@ -6,17 +6,18 @@ import Home from './Components/Home/Home';
 import { Route, Redirect } from 'react-router';
 
 const initialState = {
-  user: {},
-  isSignedin: false
+  isSignedin:false,
+  roll_number:0
 }
+
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = Object.assign({}, initialState);
+    this.state = Object.assign({},initialState);
   }
 
-  login = (loggedUser) => {
-    this.setState(prevState => Object.assign({}, prevState, { user: loggedUser, isSignedin: true }));
+  login = (loggedRollNumber) => {
+    this.setState({ roll_number: loggedRollNumber, isSignedin: true });
   }
 
   logout = () => {
@@ -37,7 +38,7 @@ class App extends React.Component {
 
         <Route path="/">
           {this.state.isSignedin ?
-            <Home logout={this.logout} user={this.state.user} /> :
+            <Home logout={this.logout} roll_number={this.state.roll_number} /> :
             <Redirect to="/signin" />
           }
         </Route>

@@ -63,10 +63,10 @@ class AnswersList extends React.Component {
             if (time >= 60) {
                 time = Math.round(time / 60);
                 unit = 'hours'
-            }
-            if (time >= 24) {
-                time = Math.round(time / 24);
-                unit = 'days'
+                if (time >= 24) {
+                    time = Math.round(time / 24);
+                    unit = 'days'
+                }
             }
         }
         return (

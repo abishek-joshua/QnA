@@ -1,48 +1,27 @@
 import React from 'react';
 import './App.css';
-import Register from './Components/Register/Register';
-import Signin from './Components/Signin/Signin';
+import { Route } from 'react-router-dom';
 import Home from './Components/Home/Home';
-import { Route, Redirect } from 'react-router';
+import Register from './Components/Register/Register';
+import SignIn from './Components/SignIn/SignIn';
+import Ask from './Components/Ask/Ask';
 
-const initialState = {
-  isSignedin: false,
-  roll_number: null
-}
-
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = Object.assign({}, initialState);
-  }
-
-  login = (loggedRollNumber) => {
-    this.setState({ roll_number: loggedRollNumber, isSignedin: true });
-  }
-
-  logout = () => {
-    this.setState(prevState => Object.assign({}, initialState))
-  }
-
-  render() {
+class App extends React.Component{
+  render(){
     return (
       <div className="app">
-
-        <Route path="/signin">
-          <Signin login={this.login} />
+        <Route exact path="/">
+          <Home />
         </Route>
-
-        <Route path="/register">
-          <Register />
+        <Route exact path="/register"> 
+          <Register/>
         </Route>
-
-        <Route path="/">
-          {this.state.isSignedin ?
-            <Home logout={this.logout} roll_number={this.state.roll_number} /> :
-            <Redirect to="/signin" />
-          }
+        <Route exact path="/signin">
+          <SignIn />
         </Route>
-
+        <Route exact path="/ask">
+          <Ask/>
+        </Route>
       </div>
     );
   }

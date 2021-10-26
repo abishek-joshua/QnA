@@ -24,7 +24,7 @@ class Register extends React.Component {
         })
             .then(res => res.json())
             .then(res => {
-                if (res === "Succesfully Registered. Login NOW") {
+                if (res === "success") {
                     this.setState({ registered: true })
                 }
                 else {

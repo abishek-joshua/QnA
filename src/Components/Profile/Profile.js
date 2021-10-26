@@ -9,9 +9,9 @@ class Profile extends React.Component {
         this.state = Object.assign({}, initialState);
     }
     componentDidMount = () => {
-        this.updateUserDetails();
+        this.fetchUserDetails();
     }
-    updateUserDetails = () => {
+    fetchUserDetails = () => {
 
         fetch('http://localhost:3000/profile', {
             method: 'POST',
@@ -21,7 +21,7 @@ class Profile extends React.Component {
             })
         })
             .then(res => res.json())
-            .then(res => this.setState(prevState => Object.assign({}, res)))
+            .then(res => this.setState({ user: res }))
             .catch(console.log)
     }
     onClickUpdate = () => {
@@ -40,16 +40,15 @@ class Profile extends React.Component {
         })
             .then(res => res.json())
             .then(res => {
-                if (res === "profile updated") {
-                    console.log(res);
+                if (res === "success") {
+                    this.fetchUserDetails();
                 }
                 else {
                     alert("profile cannot be updated")
                 }
             })
             .catch(console.log)
-
-        this.updateUserDetails();
+        this.fetchUserDetails();
     }
 
     render() {

@@ -55,7 +55,20 @@ class AnswersList extends React.Component {
     render() {
         var postedTime = new Date(this.props.question.creation_date);
         var now = new Date();
-        var time = Math.round((now - postedTime) / (1000 * 60 * 60));
+        var time = Math.round((now - postedTime) / 1000);
+        var unit = 'seconds'
+        if (time >= 60) {
+            time = Math.round(time / 60);
+            unit = 'minutes'
+            if (time >= 60) {
+                time = Math.round(time / 60);
+                unit = 'hours'
+            }
+            if (time >= 24) {
+                time = Math.round(time / 24);
+                unit = 'days'
+            }
+        }
         return (
             <div className="answers-list">
 
@@ -64,7 +77,7 @@ class AnswersList extends React.Component {
                         {this.props.question.question_text}
                     </div>
                     <div className="question-footer">
-                        <div className="answers-and-time"> {time} hours ago</div>
+                        <div className="answers-and-time"> {time} {unit} ago</div>
                         <div className="user">
                             <img alt="avatar" src={avatar} />
                             {this.props.question.roll_number}

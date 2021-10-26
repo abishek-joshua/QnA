@@ -2,7 +2,10 @@
     padding: 0.5em;
     margin: 0.1rem;
     border: 1px solid var(--main-color);
+    border-radius: var(--qna-border-radius);
     box-sizing: border-box;
+    box-shadow: 3px 3px  hsl(60, var(--s),30%);
+    background-color: hsl(60, var(--s),80%);
 }
 
 .question-statement{

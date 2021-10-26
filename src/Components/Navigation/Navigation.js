@@ -28,21 +28,17 @@ class Navigation extends React.Component {
                         </div>
                     </Link>
 
-                    <Link to='/signin'>
-                        <div className="icon-button-desc">
-                            <img className="icon-button" alt="logout" src={logout} />
-                            Logout
-                        </div>
-                    </Link>
+                    <div className="icon-button-desc" onClick={this.props.logout}>
+                        <img className="icon-button" alt="logout" src={logout} />
+                        Logout
+                    </div>
 
-                    <Link to='/profile/:id'>
+                    <Link to='/profile'>
                         <div className="icon-button-desc">
                             <img className="icon-button" alt="profile" src={profile} />
-                            61236
+                            {this.props.roll_number}
                         </div>
                     </Link>
-
-
                 </div>
             </nav>
         );
